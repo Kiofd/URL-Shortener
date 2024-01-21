@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Url_Shortener.props" />
+</Project>
