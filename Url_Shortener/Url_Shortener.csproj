@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="JavaScriptEngineSwitcher.Extensions.MsDependencyInjection" Version="3.21.0" />
+    <PackageReference Include="JavaScriptEngineSwitcher.V8" Version="3.23.2" />
+    <PackageReference Include="JavaScriptEngineSwitcher.V8.Native.win-x64" Version="3.23.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Core" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.1">
       <PrivateAssets>all</PrivateAssets>
@@ -14,12 +20,49 @@
     </PackageReference>
     <PackageReference Include="Npgsql" Version="8.0.1" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
+    <PackageReference Include="React.AspNet" Version="5.2.12" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.2.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="appsettings.Development.json">
-      <DependentUpon>appsettings.json</DependentUpon>
-    </Content>
+    <_ContentIncludedByDefault Remove="Identity.Api\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="Identity.Api\appsettings.json" />
+    <_ContentIncludedByDefault Remove="Identity.Api\obj\Identity.Api.csproj.nuget.dgspec.json" />
+    <_ContentIncludedByDefault Remove="Identity.Api\obj\project.assets.json" />
+    <_ContentIncludedByDefault Remove="Identity.Api\obj\project.packagespec.json" />
+    <_ContentIncludedByDefault Remove="Identity.Api\Properties\launchSettings.json" />
+    <_ContentIncludedByDefault Remove="Identity.Api\Views\Home\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Identity.Api\Views\Home\Privacy.cshtml" />
+    <_ContentIncludedByDefault Remove="Identity.Api\Views\Shared\Error.cshtml" />
+    <_ContentIncludedByDefault Remove="Identity.Api\Views\Shared\_Layout.cshtml" />
+    <_ContentIncludedByDefault Remove="Identity.Api\Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <_ContentIncludedByDefault Remove="Identity.Api\Views\_ViewImports.cshtml" />
+    <_ContentIncludedByDefault Remove="Identity.Api\Views\_ViewStart.cshtml" />
+    <_ContentIncludedByDefault Remove="WebApplication1\packages.config" />
+    <_ContentIncludedByDefault Remove="WebApplication1\Views\Web.config" />
+    <_ContentIncludedByDefault Remove="WebApplication1\Web.config" />
+    <_ContentIncludedByDefault Remove="WebApplication1\Web.Debug.config" />
+    <_ContentIncludedByDefault Remove="WebApplication1\Web.Release.config" />
+    <_ContentIncludedByDefault Remove="WebApplication1\Views\Home\About.cshtml" />
+    <_ContentIncludedByDefault Remove="WebApplication1\Views\Home\Contact.cshtml" />
+    <_ContentIncludedByDefault Remove="WebApplication1\Views\Home\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="WebApplication1\Views\Shared\Error.cshtml" />
+    <_ContentIncludedByDefault Remove="WebApplication1\Views\Shared\_Layout.cshtml" />
+    <_ContentIncludedByDefault Remove="WebApplication1\Views\_ViewStart.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Authentication\ErrorMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Authentication\ErrorMessages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
   </ItemGroup>
 
 </Project>

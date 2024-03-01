@@ -1,0 +1,15 @@
+﻿@model Url_Shortener.Models.RegisterViewModel
+
+<h2>Registration</h2>
+
+<form asp-action="Register" asp-controller="Account">
+  <div class="form-group">
+    <label asp-for="Email">Email address</label>
+    <input type="text"  asp-for="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label asp-for="Password">Password</label>
+    <input type="password" asp-for="Password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

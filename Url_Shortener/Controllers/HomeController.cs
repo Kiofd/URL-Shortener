@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Url_Shortener.Models;
 
 namespace Url_Shortener.Controllers
@@ -17,7 +18,11 @@ namespace Url_Shortener.Controllers
         {
             return View();
         }
-
+        public IActionResult Login()
+        {
+            return View();
+        }
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();
